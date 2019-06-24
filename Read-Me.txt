@@ -7,4 +7,5 @@ Instructions:
  ii. Create a button with lotusscript as per ButtonLotuscript.txt (Make sure u choose Lotuscript in the dropdown menu and slect client in run)
  iii.Save the js Folder is the specific filepath which you can specify in the Dim i (shellid)
  iv. Make sure the filepath is specified with file name in  object rtitem
-  v. Goodluck!!
+  v. Make sure that similar named picture is not saved in that folder previously
+ vi. Goodluck!!
