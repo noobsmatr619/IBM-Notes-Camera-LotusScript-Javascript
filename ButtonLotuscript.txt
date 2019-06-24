@@ -1,0 +1,23 @@
+Sub Click(Source As Button)
+	Dim i As Long
+	Dim y As String
+	Dim uidoc As notesuidocument
+	Dim w As New notesuiworkspace
+	Dim object As NotesEmbeddedObject
+	Dim doc As NotesDocument
+	Dim rtitem As NotesRichTextItem
+	i = Shellid("cmd /c start P:\js\Untitled-1.html")
+	
+	y="taskkill /PID"
+	Sleep 10
+	Set uidoc=w.currentdocument
+	Set doc = uidoc.Document
+	
+	Set rtitem = doc.GetFirstItem( "imageEmbedder" )
+	Set object= rtitem.EmbedObject(EMBED_ATTACHMENT, "", "C:\Temp\untitled.png")
+	doc.Form = "formNote"
+	
+	Call doc.Save( True, False)
+	Kill "C:\Temp\untitled.png"
+	Call uidoc.Close
+End Sub
